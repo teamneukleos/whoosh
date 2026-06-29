@@ -23,58 +23,50 @@ function LiveEngagementIcon() {
 
 export default function Hero() {
   return (
-    <section className="bg-[#F7F7F7]">
-      <div className="mx-auto max-w-7xl px-6 py-28 lg:px-10 lg:py-40">
+    <section className="bg-[#F7F7F7] pt-4">
+      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-32">
         <div className="grid items-center gap-16 lg:grid-cols-2">
 
-          {/* LEFT CONTENT */}
           <div>
             <span className="inline-block rounded-sm bg-[#091B68] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white">
               The African Creator Economy
             </span>
 
-            <h1 className="mt-6 max-w-lg text-4xl font-bold leading-tight text-[#171A22] lg:text-5xl">
-              Empowering <br />
-              African Creators,
-              <span className="block text-[#1D4EFF]">
-                Scaling Global <br />
-                Brands.
-              </span>
+            <h1 className="mt-6 max-w-xl text-4xl font-bold leading-tight text-[#171A22] lg:text-5xl">
+              The Creator Marketplace{' '}
+              <span className="text-[#1D4EFF]">Built for Africa</span>
             </h1>
 
-            <p className="mt-6 max-w-lg text-base leading-8 text-[#5B6170] lg:text-lg">
-              Connect with top-tier talent across the continent.
-              Our platform simplifies discovery, automates campaign
-              management, and tracks real-time ROI for every creative
-              dollar spent.
+            <p className="mt-6 max-w-xl text-base leading-8 text-[#5B6170] lg:text-lg">
+              Discover, manage, and pay verified creators at scale. Kreate helps brands
+              run measurable creator campaigns while giving creators reliable opportunities
+              and fast payouts.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/campaigns/create"
-                className="rounded bg-[#091B68] px-8 py-4 text-center font-semibold text-white transition hover:opacity-90"
-              >
-                Start a Campaign
-              </Link>
-
-              <Link
-                href="/discover"
-                className="rounded border border-[#091B68] px-8 py-4 text-center font-semibold text-[#091B68] transition hover:bg-[#091B68] hover:text-white"
-              >
-                Explore Creators
-              </Link>
+              <div className="flex flex-col gap-1">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#5B6170]">For Brands</span>
+                <Link
+                  href="/campaigns/create"
+                  className="rounded bg-[#091B68] px-8 py-4 text-center font-semibold text-white transition hover:opacity-90"
+                >
+                  Start a Campaign
+                </Link>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#5B6170]">For Creators</span>
+                <Link
+                  href="/signup"
+                  className="rounded border border-[#091B68] px-8 py-4 text-center font-semibold text-[#091B68] transition hover:bg-[#091B68] hover:text-white"
+                >
+                  Join as a Creator
+                </Link>
+              </div>
             </div>
           </div>
 
-          {/* RIGHT CONTENT */}
           <div className="w-full overflow-hidden">
-
-            {/* MOBILE: stacked vertically, same sizes */}
             <div className="flex flex-col gap-3 lg:hidden">
-
-              
-
-              {/* Large image below */}
               <div className="relative h-[440px] w-[290px]">
                 <Image
                   src="/hero-images/hero-creator.png"
@@ -92,13 +84,9 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
-
             </div>
 
-            {/* DESKTOP: original layout untouched */}
             <div className="relative mx-auto hidden h-[520px] max-w-[500px] lg:block">
-
-              {/* LARGE IMAGE */}
               <div className="absolute left-0 top-0 h-[440px] w-[290px] sm:w-[310px]">
                 <Image
                   src="/hero-images/hero-creator.png"
@@ -106,8 +94,6 @@ export default function Hero() {
                   fill
                   className="rounded-xs object-cover object-top"
                 />
-
-                {/* LIVE ENGAGEMENT CARD */}
                 <div className="absolute bottom-0 left-0 flex items-center gap-3 rounded-xs bg-white px-4 py-3 shadow-sm">
                   <div className="shrink-0">
                     <LiveEngagementIcon />
@@ -119,10 +105,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* RIGHT COLUMN */}
               <div className="absolute left-[310px] top-10 flex flex-col gap-3 sm:left-[330px]">
-
-                {/* ROI CARD */}
                 <div className="flex h-[120px] w-[155px] flex-col justify-center rounded-xs p-4">
                   <span className="w-fit rounded-md bg-[#A6F2D1] px-3 py-1 text-xs font-semibold text-[#0B5D3A]">
                     ROI +240%
@@ -130,7 +113,6 @@ export default function Hero() {
                   <h4 className="mt-3 text-base font-semibold text-[#171A22]">Tech Review</h4>
                 </div>
 
-                {/* SMALL IMAGE */}
                 <div className="relative h-[180px] w-[155px] overflow-hidden rounded-xs">
                   <Image
                     src="/hero-images/hero-creator-2.png"
@@ -140,7 +122,6 @@ export default function Hero() {
                   />
                 </div>
               </div>
-
             </div>
           </div>
 
