@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-white/70">
-            ©2026 Woosh. Empowering African Creators.
+            ©2026 Kreate. Empowering African Creators.
           </p>
 
         </div>
