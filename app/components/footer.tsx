@@ -32,7 +32,7 @@ export default function Footer() {
           <Link href="/" className="shrink-0">
             <Image
               src="/logo/logo-white.svg"
-              alt="Woosh"
+              alt="Whoosh"
               width={180}
               height={80}
               className="h-auto w-auto"
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-white/70">
-            ©2026 Kreate. Empowering African Creators.
+            ©2026 Whoosh. Empowering African Creators.
           </p>
 
         </div>

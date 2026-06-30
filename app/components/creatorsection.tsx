@@ -37,7 +37,7 @@ export default function CreatorSection() {
 
             <Link
               href="/signup"
-              className="mt-10 inline-block rounded bg-[#A1B7FF] px-8 py-4 font-semibold text-[#091B68] transition hover:opacity-90"
+              className="mt-10 inline-block rounded-full bg-[#A1B7FF] px-8 py-4 font-semibold text-[#091B68] transition hover:opacity-90"
             >
               Join as a Creator
             </Link>
