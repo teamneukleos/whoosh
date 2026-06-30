@@ -38,7 +38,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-[#5B6170] lg:text-lg">
-              Discover, manage, and pay verified creators at scale. Kreate helps brands
+              Discover, manage, and pay verified creators at scale. Whoosh helps brands
               run measurable creator campaigns while giving creators reliable opportunities
               and fast payouts.
             </p>
@@ -48,7 +48,7 @@ export default function Hero() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-[#5B6170]">For Brands</span>
                 <Link
                   href="/campaigns/create"
-                  className="rounded bg-[#091B68] px-8 py-4 text-center font-semibold text-white transition hover:opacity-90"
+                  className="rounded-full bg-[#091B68] px-8 py-4 text-center font-semibold text-white transition hover:opacity-90"
                 >
                   Start a Campaign
                 </Link>
@@ -57,7 +57,7 @@ export default function Hero() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-[#5B6170]">For Creators</span>
                 <Link
                   href="/signup"
-                  className="rounded border border-[#091B68] px-8 py-4 text-center font-semibold text-[#091B68] transition hover:bg-[#091B68] hover:text-white"
+                  className="rounded-full border border-[#091B68] px-8 py-4 text-center font-semibold text-[#091B68] transition hover:bg-[#091B68] hover:text-white"
                 >
                   Join as a Creator
                 </Link>

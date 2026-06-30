@@ -23,7 +23,7 @@ export default function CTA() {
               </span>
               <Link
                 href="/campaigns/create"
-                className="w-full rounded bg-[#A1B7FF] px-8 py-4 text-center font-semibold text-[#091B68] transition hover:opacity-90 sm:w-auto"
+                className="w-full rounded-full bg-[#A1B7FF] px-8 py-4 text-center font-semibold text-[#091B68] transition hover:opacity-90 sm:w-auto"
               >
                 Launch Your First Campaign
               </Link>
@@ -35,9 +35,9 @@ export default function CTA() {
               </span>
               <Link
                 href="/signup"
-                className="w-full rounded border border-[#A1B7FF] px-8 py-4 text-center font-semibold text-white transition hover:bg-white/10 sm:w-auto"
+                className="w-full rounded-full border border-[#A1B7FF] px-8 py-4 text-center font-semibold text-white transition hover:bg-white/10 sm:w-auto"
               >
-                Apply to Join Kreate
+                Apply to Join Whoosh
               </Link>
             </div>
           </div>

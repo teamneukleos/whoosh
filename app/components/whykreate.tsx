@@ -36,7 +36,7 @@ export default function WhyKreate() {
             Built for the African Creator Economy
           </h2>
           <p className="mt-4 text-base leading-7 text-[#5B6170] lg:text-lg">
-            Unlike global influencer platforms, Kreate is designed around how creator
+            Unlike global influencer platforms, Whoosh is designed around how creator
             marketing actually works in Nigeria and Africa.
           </p>
         </div>
