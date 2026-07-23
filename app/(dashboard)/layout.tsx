@@ -1,14 +1,13 @@
+import type { ReactNode } from 'react';
 import Navbar from '../components/navbar';
 import SidebarMenu from '../components/sidebarmenu';
-import Footer from '../components/footer';
 
-export default function DashboardLayout({ children }) {
+export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Navbar />
-        <SidebarMenu />
+      <SidebarMenu />
       {children}
-      <Footer />
     </>
   );
 }

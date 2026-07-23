@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, type MouseEvent } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const landingLinks = [
@@ -27,11 +27,29 @@ export default function Navbar() {
   const isLanding = pathname === '/';
   const links = isLanding ? landingLinks : dashboardLinks;
 
+  const handleAnchorClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!isLanding || !href.startsWith('#')) return;
+
+    event.preventDefault();
+
+    const targetId = href.slice(1);
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 96;
+      window.scrollTo({ top, behavior: 'smooth' });
+    } else {
+      window.location.hash = href;
+    }
+
+    setOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 lg:px-8">
         <Link href="/">
-          <Image src="/logo/logo.svg" alt="Kreate" width={100} height={60} priority />
+          <Image src="/logo/logo.svg" alt="Whoosh" width={100} height={60} priority />
         </Link>
 
         <div className="hidden items-center gap-8 lg:flex">
@@ -40,6 +58,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               className="font-bold text-gray-700 transition hover:text-black"
+              onClick={(event) => handleAnchorClick(event, link.href)}
             >
               {link.label}
             </Link>
@@ -51,13 +70,13 @@ export default function Navbar() {
             <>
               <Link
                 href="/campaigns/create"
-                className="rounded-xs bg-[#091B68] px-5 py-2 font-medium text-white transition hover:opacity-90"
+                className="rounded-full bg-[#091B68] px-5 py-2 font-medium text-white transition hover:opacity-90"
               >
                 Start a Campaign
               </Link>
               <Link
                 href="/signup"
-                className="rounded-xs border border-[#091B68] px-5 py-2 font-medium text-[#091B68] transition hover:bg-[#091B68] hover:text-white"
+                className="rounded-full border border-[#091B68] px-5 py-2 font-medium text-[#091B68] transition hover:bg-[#091B68] hover:text-white"
               >
                 Join as a Creator
               </Link>
@@ -66,7 +85,7 @@ export default function Navbar() {
             <>
               <Link
                 href="/campaigns/create"
-                className="rounded-xs bg-[#091B68] px-6 py-2 font-medium text-white transition hover:opacity-90"
+                className="rounded-full bg-[#091B68] px-6 py-2 font-medium text-white transition hover:opacity-90"
               >
                 New Campaign
               </Link>
@@ -83,7 +102,7 @@ export default function Navbar() {
           )}
         </div>
 
-        <button onClick={() => setOpen(!open)} className="lg:hidden" aria-label="Toggle menu">
+        <button onClick={() => setOpen(!open)} className="text-black lg:hidden" aria-label="Toggle menu">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
@@ -96,7 +115,7 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 className="font-bold text-gray-700"
-                onClick={() => setOpen(false)}
+                onClick={(event) => handleAnchorClick(event, link.href)}
               >
                 {link.label}
               </Link>

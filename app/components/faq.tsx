@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'How does Kreate verify creators?',
+    question: 'How does Whoosh verify creators?',
     answer:
       'We use platform data, engagement analysis, and authenticity scoring to evaluate creator quality.',
   },
@@ -15,7 +15,7 @@ const faqs = [
       'Funds are held securely and released after approved deliverables, with payouts processed directly to creator bank accounts.',
   },
   {
-    question: 'Can agencies use Kreate?',
+    question: 'Can agencies use Whoosh?',
     answer:
       'Yes. Agencies can discover creators, manage campaigns, and report performance on behalf of clients.',
   },
@@ -25,7 +25,7 @@ const faqs = [
       'Instagram, TikTok, and YouTube initially, with additional integrations planned.',
   },
   {
-    question: 'Is Kreate available outside Nigeria?',
+    question: 'Is Whoosh available outside Nigeria?',
     answer:
       'Nigeria is our launch market, with expansion planned across Africa.',
   },

@@ -76,7 +76,7 @@ export default function SidebarMenu() {
 
       {/* Sidebar */}
       <aside
-        className="fixed left-0 top-[72px] rounded-md bottom-[1px] z-40 hidden w-[264px] flex-col lg:flex"
+        className="fixed left-0 top-[72px] bottom-[1px] z-40 hidden w-[264px] flex-col lg:flex"
         style={{ backgroundColor: '#091B68' }}
       >
         {/* Top: hamburger + logo text */}

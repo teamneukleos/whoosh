@@ -32,9 +32,9 @@ export default function Solution() {
     <section id="solution" className="bg-[#F8F9FC] py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold text-[#171A22] lg:text-4xl">Meet Kreate</h2>
+          <h2 className="text-3xl font-bold text-[#171A22] lg:text-4xl">Meet Whoosh</h2>
           <p className="mt-4 text-base leading-7 text-[#5B6170] lg:text-lg">
-            Kreate brings creators, brands, and agencies into one platform. From creator
+            Whoosh brings creators, brands, and agencies into one platform. From creator
             discovery to campaign reporting, everything happens in a single workflow.
           </p>
         </div>

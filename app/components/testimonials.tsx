@@ -1,7 +1,7 @@
 const testimonials = [
   {
     quote:
-      'Kreate helped us discover creators we would never have found through traditional influencer marketing.',
+      'Whoosh helped us discover creators we would never have found through traditional influencer marketing.',
     role: 'Brand Marketing Lead',
   },
   {
