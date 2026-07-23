@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useLogin } from '@/app/hooks/auth/useLogin';
+import PasswordInput from '@/app/components/passwordinput';
 import { authService, toAuthUser } from '@/app/services/auth.service';
 import { setAuthToken } from '@/app/lib/axios';
 import { saveAuthSession } from '@/app/lib/auth-session';
@@ -85,16 +86,20 @@ export default function LoginPage() {
               />
             </div>
 
-            <div>
-              <label className="mb-1.5 block text-sm text-[#191C1D]">Password</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter your password"
-                className={inputClassName}
-              />
-            </div>
+            <PasswordInput
+              label="Password"
+              value={password}
+              onChange={setPassword}
+              placeholder="Enter your password"
+              labelRight={
+                <Link
+                  href="/forgot-password"
+                  className="text-xs font-medium text-[#091B68] hover:underline"
+                >
+                  Forgot password?
+                </Link>
+              }
+            />
 
             <button
               type="button"

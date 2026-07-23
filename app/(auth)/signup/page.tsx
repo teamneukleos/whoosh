@@ -18,6 +18,7 @@ import {
   saveAuthSession,
 } from '@/app/lib/auth-session';
 import { getApiErrorMessage, isEmailAlreadyExistsError } from '@/app/lib/api-error';
+import PasswordInput from '@/app/components/passwordinput';
 
 type IntendedRole = 'Brand' | 'Creator';
 type Step = 1 | 2;
@@ -429,16 +430,12 @@ export default function SignupPage() {
                 />
               </div>
 
-              <div>
-                <label className="mb-1.5 block text-sm text-[#191C1D]">Password</label>
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Create a password"
-                  className={inputClassName}
-                />
-              </div>
+              <PasswordInput
+                label="Password"
+                value={password}
+                onChange={setPassword}
+                placeholder="Create a password"
+              />
 
               <label className="flex cursor-pointer items-center gap-2.5">
                 <input
