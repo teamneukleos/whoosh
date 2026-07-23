@@ -57,6 +57,22 @@ export interface LoginPayload {
 
 export type LoginResponse = AuthTokenResponse;
 
+export interface ForgotPasswordPayload {
+  email: string;
+}
+
+export interface ResetPasswordPayload {
+  token: string;
+  newPassword: string;
+}
+
+export interface MessageResponse {
+  message: string;
+}
+
+export type ForgotPasswordResponse = MessageResponse;
+export type ResetPasswordResponse = MessageResponse;
+
 export interface CreatorOnboardPayload {
   displayName: string;
   locationState: string;
@@ -140,6 +156,26 @@ export const authService = {
 
   login: async (data: LoginPayload): Promise<LoginResponse> => {
     const response = await api.post<LoginResponse>('/auth/login', data);
+    return response.data;
+  },
+
+  forgotPassword: async (
+    data: ForgotPasswordPayload
+  ): Promise<ForgotPasswordResponse> => {
+    const response = await api.post<ForgotPasswordResponse>(
+      '/auth/forgot-password',
+      data
+    );
+    return response.data;
+  },
+
+  resetPassword: async (
+    data: ResetPasswordPayload
+  ): Promise<ResetPasswordResponse> => {
+    const response = await api.post<ResetPasswordResponse>(
+      '/auth/reset-password',
+      data
+    );
     return response.data;
   },
 
