@@ -14,7 +14,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Whoosh",
+  title: "Woosh",
   description: "Nigeria's Creator-Brand Marketplace",
 };
 

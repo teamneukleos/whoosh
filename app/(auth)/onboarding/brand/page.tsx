@@ -47,7 +47,7 @@ export default function BrandOnboardingPage() {
         <Link href="/">
           <Image
             src="/logo/logo.svg"
-            alt="Whoosh"
+            alt="Woosh"
             width={100}
             height={60}
             priority

@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { LogOut } from 'lucide-react';
+import { useLogout } from '@/app/hooks/auth/useLogout';
 
 function HamburgerIcon() {
   return (
@@ -64,6 +65,7 @@ const navItems = [
 export default function SidebarMenu() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const logout = useLogout();
 
   return (
     <>
@@ -121,6 +123,14 @@ export default function SidebarMenu() {
 
         {/* Create Brief CTA */}
         <div className="mt-auto px-3 pb-8">
+          <button
+            type="button"
+            onClick={logout}
+            className="mb-3 flex w-full items-center gap-3 rounded px-3 py-3 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+          >
+            <LogOut size={16} className="text-[#D8E1FF]" />
+            <span style={{ color: '#EFEFEF' }}>Log out</span>
+          </button>
           <div className="rounded bg-[#D8E1FF] px-3 py-3">
             <Link
               href="/campaigns/create"

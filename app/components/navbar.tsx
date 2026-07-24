@@ -4,7 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, type MouseEvent } from 'react';
-import { Menu, X } from 'lucide-react';
+import { LogOut, Menu, X } from 'lucide-react';
+import { useLogout } from '@/app/hooks/auth/useLogout';
 
 const landingLinks = [
   { label: 'Solution', href: '#solution' },
@@ -24,6 +25,7 @@ const dashboardLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const logout = useLogout();
   const isLanding = pathname === '/';
   const links = isLanding ? landingLinks : dashboardLinks;
 
@@ -49,7 +51,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 lg:px-8">
         <Link href="/">
-          <Image src="/logo/logo.svg" alt="Whoosh" width={100} height={60} priority />
+          <Image src="/logo/logo.svg" alt="Woosh" width={100} height={60} priority />
         </Link>
 
         <div className="hidden items-center gap-8 lg:flex">
@@ -89,6 +91,14 @@ export default function Navbar() {
               >
                 New Campaign
               </Link>
+              <button
+                type="button"
+                onClick={logout}
+                className="flex items-center gap-2 rounded-full border border-[#D0D5DD] px-4 py-2 text-sm font-medium text-[#091B68] transition hover:bg-gray-50"
+              >
+                <LogOut size={16} />
+                Log out
+              </button>
               <button className="overflow-hidden rounded-full">
                 <Image
                   src="/avatar.png"
@@ -146,9 +156,16 @@ export default function Navbar() {
                 >
                   New Campaign
                 </Link>
-                <button className="flex items-center gap-3">
-                  <Image src="/avatar.png" alt="User" width={40} height={40} className="rounded-full" />
-                  <span>Profile</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setOpen(false);
+                    logout();
+                  }}
+                  className="flex items-center gap-3 font-bold text-gray-700"
+                >
+                  <LogOut size={18} />
+                  Log out
                 </button>
               </>
             )}

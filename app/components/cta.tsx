@@ -37,7 +37,7 @@ export default function CTA() {
                 href="/signup"
                 className="w-full rounded-full border border-[#A1B7FF] px-8 py-4 text-center font-semibold text-white transition hover:bg-white/10 sm:w-auto"
               >
-                Apply to Join Whoosh
+                Apply to Join Woosh
               </Link>
             </div>
           </div>

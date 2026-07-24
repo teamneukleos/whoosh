@@ -38,7 +38,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-[#5B6170] lg:text-lg">
-              Discover, manage, and pay verified creators at scale. Whoosh helps brands
+              Discover, manage, and pay verified creators at scale. Woosh helps brands
               run measurable creator campaigns while giving creators reliable opportunities
               and fast payouts.
             </p>
