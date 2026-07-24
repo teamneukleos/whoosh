@@ -39,7 +39,7 @@ export default function BrandGoalsPage() {
         <Link href="/">
           <Image
             src="/logo/logo.svg"
-            alt="Whoosh"
+            alt="Woosh"
             width={80}
             height={24}
             priority

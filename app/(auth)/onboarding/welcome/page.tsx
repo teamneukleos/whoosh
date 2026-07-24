@@ -12,7 +12,7 @@ export default function WelcomePage() {
 
       <header className="flex items-center justify-between border-b border-gray-200 bg-white px-6 py-4">
         <Link href="/">
-          <Image src="/logo/logo.svg" alt="Whoosh" width={80} height={24} priority />
+          <Image src="/logo/logo.svg" alt="Woosh" width={80} height={24} priority />
         </Link>
         <button
           type="button"
