@@ -264,7 +264,7 @@ export default function SignupPage() {
         {
           onSuccess: () => {
             markOnboardingComplete();
-            router.push('/discover');
+            router.push('/onboarding/socials');
           },
           onError: (err) => {
             setError(getApiErrorMessage(err, 'Creator onboarding failed. Please try again.'));
