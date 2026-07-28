@@ -55,11 +55,20 @@ function PlusIcon() {
   );
 }
 
+function SettingsIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.4 14.8L6.1 12.55C5.95 12.49 5.805 12.415 5.665 12.32C5.525 12.225 5.395 12.12 5.275 12L3.15 12.85L1.35 9.75L3.2 8.35C3.185 8.22 3.1775 8.0925 3.1775 7.9675C3.1775 7.8425 3.185 7.715 3.2 7.585L1.35 6.185L3.15 3.085L5.275 3.935C5.395 3.815 5.525 3.71 5.665 3.615C5.805 3.52 5.95 3.445 6.1 3.385L6.4 1.135H9.6L9.9 3.385C10.05 3.445 10.195 3.52 10.335 3.615C10.475 3.71 10.605 3.815 10.725 3.935L12.85 3.085L14.65 6.185L12.8 7.585C12.815 7.715 12.8225 7.8425 12.8225 7.9675C12.8225 8.0925 12.815 8.22 12.8 8.35L14.65 9.75L12.85 12.85L10.725 12C10.605 12.12 10.475 12.225 10.335 12.32C10.195 12.415 10.05 12.49 9.9 12.55L9.6 14.8H6.4ZM8 10.35C8.65 10.35 9.2 10.125 9.65 9.675C10.1 9.225 10.325 8.675 10.325 8.025C10.325 7.375 10.1 6.825 9.65 6.375C9.2 5.925 8.65 5.7 8 5.7C7.35 5.7 6.8 5.925 6.35 6.375C5.9 6.825 5.675 7.375 5.675 8.025C5.675 8.675 5.9 9.225 6.35 9.675C6.8 10.125 7.35 10.35 8 10.35Z" fill="#D8E1FF" />
+    </svg>
+  );
+}
+
 const navItems = [
   { label: 'Discovery Engine', href: '/discover', icon: DiscoveryIcon },
   { label: 'Campaign Manager', href: '/campaigns', icon: CampaignIcon },
   { label: 'Performance Analytics', href: '/analytics', icon: AnalyticsIcon },
   { label: 'Payment', href: '/payments', icon: PaymentIcon },
+  { label: 'Social accounts', href: '/settings/socials', icon: SettingsIcon },
 ];
 
 export default function SidebarMenu() {
@@ -101,7 +110,8 @@ export default function SidebarMenu() {
         {/* Nav items */}
         <nav className="mt-1 flex flex-col px-3">
           {navItems.map(({ label, href, icon: Icon }) => {
-            const isActive = pathname === href;
+            const isActive =
+              pathname === href || pathname.startsWith(`${href}/`);
             return (
               <Link
                 key={href}
