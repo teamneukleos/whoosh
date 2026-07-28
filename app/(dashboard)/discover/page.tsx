@@ -5,7 +5,7 @@ import SidebarMenu from '../../components/sidebarmenu';
 
 const MOCK_CREATORS = Array.from({ length: 9 }, (_, i) => ({
   id: i + 1,
-  name: 'Tomiwa Alade',
+  name: 'Tomiwa Akande',
   rating: 5.0,
   niche: 'Tech enthusiast & Lifest...',
   price: '$250',
